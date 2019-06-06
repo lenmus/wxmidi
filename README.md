@@ -14,9 +14,9 @@ During LenMus Phonascus development, it was necessary to write code to deal with
 - [Documentation](https://lenmus.github.io/wxmidi/)
 - [Installation](#install)
 - [License](#license)
-- [Acknowledgements](#acknowledge)
 - [Help, bug reports and feedback](#help)
-- [Changelog](../blob/master/CHANGELOG.txt)
+- [Acknowledgements](#acknowledge)
+- [Changelog](CHANGELOG.txt)
 
 
 ## <a name="features"></a>Features
@@ -58,10 +58,10 @@ In MS Windows the situation is just the contrary: unless another package has alr
 or later as published by the Free Software Foundation, with the wxWindows 3.1 exception. This permissive license includes the fulltext of the LGPL, but has an exception that allows you to use, copy, link, modify and distribute binary object code versions of wxMidi under licenses of your own choosing. Also allows static linking.
 
 For details see files:
-- [LICENSE.spdx](../blob/master/LICENSE.spdx)
-- [LICENSE.txt](../blob/master/LICENSE.txt)
-- [LPGL-3.0.txt](../blob/master/LPGL-3.0.txt)
-- [WxWindows-exception-3.1.txt](../blob/master/WxWindows-exception-3.1.txt)
+- [LICENSE.spdx](LICENSE.spdx)
+- [LICENSE.txt](LICENSE.txt)
+- [LPGL-3.0.txt](LPGL-3.0.txt)
+- [WxWindows-exception-3.1.txt](WxWindows-exception-3.1.txt)
 
 
 ## <a name="help" />Help, bug reports and feedback
