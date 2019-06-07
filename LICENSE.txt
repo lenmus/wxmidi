@@ -1,8 +1,9 @@
 SPDX-License-Identifier: LGPL-3.0+ WITH WxWindows-exception-3.1
 
 Summary:
-	This permissive license includes the fulltext of the LGPL, but has an exception that allows you to use, copy, link, modify and
-distribute binary object code versions of wxMidi under licenses of your own choosing. Also allows static linking.
+	This permissive license includes the fulltext of the LGPL, but has an exception
+that allows you to use, copy, link, modify and distribute binary object code versions of
+wxMidi under licenses of your own choosing. Also allows static linking.
 
 
                    GNU LESSER GENERAL PUBLIC LICENSE
@@ -70,9 +71,7 @@ version:
   3. Object Code Incorporating Material from Library Header Files.
 
   The object code form of an Application may incorporate material from
-a header file that is part of the Library.  You may convey such objectyou may use, copy, link, modify and
-distribute under your own terms, binary object code versions of works
-based on the Library.
+a header file that is part of the Library.  You may convey such object
 code under terms of your choice, provided that, if the incorporated
 material is not limited to numerical parameters, data structure
 layouts and accessors, or small macros, inline functions and templates

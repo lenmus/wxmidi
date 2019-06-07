@@ -3,8 +3,12 @@ Cangelog for wxMidi package
 
 wxMidi:     A MIDI interface based on PortMidi, the Portable Real-Time MIDI Library
 Author:     Cecilio Salmeron <s.cecilio@gmail.com>
-Copyright:  (c) 2005-2015 Cecilio Salmeron
-Licence:    wxWidgets licence
+Copyright:  (c) 2005-2019 Cecilio Salmeron
+Licence:    wxWidgets licence.
+			This permissive license includes the fulltext of the LGPL, but has an
+			exception that allows you to use, copy, link, modify and distribute binary
+			object code versions of wxMidi under licenses of your own choosing. Also
+			allows static linking.
 
 
 
