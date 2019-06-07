@@ -19,7 +19,7 @@ During LenMus Phonascus development, it was necessary to write code to deal with
 - [Changelog](CHANGELOG.txt)
 
 
-## <a name="features"></a>Features
+## <a name="features" />Features
 
 wxMidi provides a suitable interface, object oriented, to use portmidi with wxWidgets.
 - All strings has been moved from PortMidi and adapted to support internationalization.
@@ -36,10 +36,10 @@ The wxMidi package includes a sample application that uses the wxMidi classes sh
 
 Extensive documentation is available at https://lenmus.github.io/wxmidi/
 
-## <a name="install"></a>Installation and usage
+## <a name="install" />Installation and usage
 
 No installation needed. Use wxMidi source files as part of your application source code. wxMidi is just two source files and one header file. Copy them to your application source tree, and compile them with your code.
-(../blob/master/LPGL-3.0.txt)
+
 Obviously you will also require the PortMidi library and you will have to modify your application makefile or project build file to link with this library.
 
 In Linux, portmidi is normally already installed in your system. If not, install package portmidi. For instance, in Debian based systems, open a terminal window and enter:
@@ -52,7 +52,7 @@ In MS Windows the situation is just the contrary: unless another package has alr
 
 
 
-## <a name="install" />License
+## <a name="license" />License
 
 **wxMidi** is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License version 3
 or later as published by the Free Software Foundation, with the wxWindows 3.1 exception. This permissive license includes the fulltext of the LGPL, but has an exception that allows you to use, copy, link, modify and distribute binary object code versions of wxMidi under licenses of your own choosing. Also allows static linking.

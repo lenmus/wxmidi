@@ -29,7 +29,7 @@ if [[ ! -e "${root_path}/src" ]]; then
 fi
 
 #paths
-projects=${scripts_path%/lomse/trunk/scripts}
+projects=${scripts_path%/wxmidi/scripts}
 local_repo="${projects}/lenmus-io/wxmidi/"
 from="${projects}/wxmidi/zz_build-api/html"
 echo "projects = ${projects}"
