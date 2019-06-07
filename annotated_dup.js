@@ -1,4 +1,4 @@
-var annotated =
+var annotated_dup =
 [
     [ "wxMidiDatabaseGM", "classwxMidiDatabaseGM.html", "classwxMidiDatabaseGM" ],
     [ "wxMidiDevice", "classwxMidiDevice.html", "classwxMidiDevice" ],
