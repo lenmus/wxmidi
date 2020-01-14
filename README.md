@@ -25,7 +25,7 @@ wxMidi provides a suitable interface, object oriented, to use portmidi with wxWi
 - All strings has been moved from PortMidi and adapted to support internationalization.
 - In PortMidi SysEx messages are received in chunks with real-time messages interleaved. In wxMidi, sysex messages are received completed, in a single string of bytes, and any real-time message embedded is delivered before the sysex message is delivered.
 - In PortMidi user has to deal with buffer's allocation issues. In wxMidi, all buffer allocation for messages is hidden in the wxMidi classes. User has not to worry abut this.
-- wxMidi also includes an additional feature, class wxMidiDatabaseGB, which provides methods for dealing with the General MIDI Standard (GM) instruments list.
+- wxMidi also includes an additional feature, class wxMidiDatabaseGM, which provides methods for dealing with the General MIDI Standard (GM) instruments list.
 
 By now, these classes wrap only the most important PortMidi features but they are perfectly integrated with wxWidgets and easily extensible since they provide good commented code and documentation.
 
