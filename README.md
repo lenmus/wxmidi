@@ -90,6 +90,7 @@ The following people have contributed to **wxMidi**:
 - Carlos Alarcia (French translation)
 - Emilio Mesías and Xema Sanxurxo Rodríguez (Galician translation)
 - Undine Peters (German translation)
+- Αυγέρης Τσιρώνης (Avgeris Tsironis) (Greek translation)
 - Mauro Giubileo (Italian translation)
 - 卢文汐 (Wenxi Lu)  (Simplified Chinese translation)
 - Cecilio Salmerón (Spanish translation)
