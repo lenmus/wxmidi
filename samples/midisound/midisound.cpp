@@ -682,7 +682,7 @@ void MyPanel::OnButtonOpenDevice( wxCommandEvent &event )
 
 	//get number of Midi device to use
 	int nIndex = m_pOutCombo->GetSelection();
-	int nMidiDev = reinterpret_cast<long>( m_pOutCombo->GetClientData(nIndex) );
+	int nMidiDev = reinterpret_cast<long long>( m_pOutCombo->GetClientData(nIndex) );
     m_pOutDev = new wxMidiOutDevice(nMidiDev);
 
     // open output device
@@ -702,7 +702,7 @@ void MyPanel::OnButtonOpenDevice( wxCommandEvent &event )
 	//Open input device
 	nIndex = m_pInCombo->GetSelection();
 	if (nIndex != -1) {
-		nMidiDev = reinterpret_cast<long>( m_pInCombo->GetClientData(nIndex) );
+		nMidiDev = reinterpret_cast<long long>( m_pInCombo->GetClientData(nIndex) );
 		m_pInDev = new wxMidiInDevice(nMidiDev);
 		wxString sBufSize = m_pBuffersize->GetValue();
 		long bufsize = 0L;
