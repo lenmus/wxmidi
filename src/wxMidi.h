@@ -1,3 +1,6 @@
+#ifndef __WXMIDI_H__		//to avoid nested includes
+#define __WXMIDI_H__
+
 //=====================================================================================
 // wxMidi: A MIDI interface based on PortMidi, the Portable Real-Time MIDI Library
 // --------------------------------------------------------------------------------
@@ -12,9 +15,6 @@
 #ifdef __GNUG__
 #pragma interface "wxMidi.cpp"
 #endif
-
-#ifndef __WXMIDI_H__		//to avoid nested includes
-#define __WXMIDI_H__
 
 // For compilers that support precompilation, includes "wx/wx.h".
 #include "wx/wxprec.h"
