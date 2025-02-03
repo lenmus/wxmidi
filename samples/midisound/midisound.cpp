@@ -570,7 +570,7 @@ MyPanel::MyPanel( wxFrame *frame, int x, int y, int w, int h )
 
 	m_btCrash = new wxButton(panel, ID_CRASH, _T("Crash program"),
 									wxPoint(30,30), wxSize(140,25) );
-    pPanel4Sizer->Add(m_btCrash, 0, wxALL, 10 );
+    pPanel5Sizer->Add(m_btCrash, 0, wxALL, 10 );
 
     m_book->AddPage(panel, _("Crash test"), false);
 
