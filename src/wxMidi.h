@@ -230,7 +230,7 @@ enum wxMidiFilter
 /// Event wxEVT_MIDI_INPUT is a command event triggered when a new MIDI message is available
 /// to be read. This event is only triggered if the user application has called method
 /// wxMidiInDevice::StartListening().
-DECLARE_EVENT_TYPE(wxEVT_MIDI_INPUT, -1)
+wxDECLARE_EVENT(wxEVT_MIDI_INPUT, wxCommandEvent);
 
 /// Identifies the MIDI message type
 enum wxMidiMsgType

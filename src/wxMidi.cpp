@@ -31,7 +31,7 @@
 wxMidiTimestamp wxMidiGetTime() { return Pt_Time(); }
 
 //Define the new command event to inform that MIDI input data is available
-DEFINE_EVENT_TYPE(wxEVT_MIDI_INPUT)
+wxDEFINE_EVENT(wxEVT_MIDI_INPUT, wxCommandEvent);
 
 //================================================================================
 // Implementation of classes wxMidiPmEvent, wxMidiShortEvent and wxMidiSysExEvent
