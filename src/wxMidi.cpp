@@ -574,6 +574,8 @@ wxMidiError wxMidiInDevice::StartListening(wxWindow* pWindow, unsigned long nPol
 
 wxMidiError wxMidiInDevice::StopListening()
 {
+    if (m_pThread == nullptr) return wxMIDI_ERROR_BadPtr;
+
 	//stop the thread and wait for its termination
 	m_pThread->Delete();
 	delete m_pThread;
