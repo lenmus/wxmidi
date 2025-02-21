@@ -305,8 +305,7 @@ enum {
 };
 
 //Define a new event to poll MIDI input
-//wxDECLARE_EVENT(wxEVT_POLLING_EVENT, wxCommandEvent); // Dclaration. For the header file. Not needed here, since it's a source file.
-wxDEFINE_EVENT(wxEVT_POLLING_EVENT, wxCommandEvent);    // Definition. For the source file.
+wxDEFINE_EVENT(wxEVT_POLLING_EVENT, wxCommandEvent);
 
 
 
@@ -674,7 +673,7 @@ void MyPanel::OnSize( wxSizeEvent& WXUNUSED(event) )
 }
 
 
-void MyPanel::OnButtonOpenDevice( wxCommandEvent &event )
+void MyPanel::OnButtonOpenDevice( wxCommandEvent& WXUNUSED(event) )
 {
 
 	CloseDevices();
@@ -755,7 +754,7 @@ void MyPanel::DoProgramChange()
 	m_text->AppendText(sMsg);
 
 }
-void MyPanel::OnButtonNoteOn(wxCommandEvent &event)
+void MyPanel::OnButtonNoteOn(wxCommandEvent& WXUNUSED(event))
 {
 	wxString sMsg;
 	wxMidiShortMessage msg(0x90, 60, 127);
@@ -779,7 +778,7 @@ void MyPanel::OnButtonNoteOn(wxCommandEvent &event)
 
 }
 
-void MyPanel::OnButtonNoteOff(wxCommandEvent &event)
+void MyPanel::OnButtonNoteOff(wxCommandEvent& WXUNUSED(event))
 {
 	wxString sMsg;
     wxMidiError nErr = m_pOutDev->NoteOff(0, 60, 127);
@@ -800,7 +799,7 @@ void MyPanel::OnButtonNoteOff(wxCommandEvent &event)
 
 }
 
-void MyPanel::OnButtonSendBytes(wxCommandEvent &event)
+void MyPanel::OnButtonSendBytes(wxCommandEvent& WXUNUSED(event))
 {
     //break the string into bytes
     wxByte bytes[3];
@@ -847,7 +846,7 @@ void MyPanel::OnButtonSendBytes(wxCommandEvent &event)
     m_text->AppendText(msg);
 }
 
-void MyPanel::OnButtonChord(wxCommandEvent &event)
+void MyPanel::OnButtonChord(wxCommandEvent& WXUNUSED(event))
 {
 	//PlayChord. Let's test Write with several events
     int chord[] = { 60, 67, 76, 83, 90 };
@@ -867,7 +866,7 @@ void MyPanel::OnButtonChord(wxCommandEvent &event)
 
 }
 
-void MyPanel::OnButtonPlayScale(wxCommandEvent &event)
+void MyPanel::OnButtonPlayScale(wxCommandEvent& WXUNUSED(event))
 {
 	//Play a scale
 
@@ -883,7 +882,7 @@ void MyPanel::OnButtonPlayScale(wxCommandEvent &event)
 
 }
 
-void MyPanel::OnButtonSysEx(wxCommandEvent &event)
+void MyPanel::OnButtonSysEx(wxCommandEvent& WXUNUSED(event))
 {
 	//Sorry, SysEx messages are equipment-specific commands and data for each MIDI maker.
 	//You have to change the following message to suit your specific MIDI equipment
@@ -916,7 +915,7 @@ void MyPanel::OnButtonSysEx(wxCommandEvent &event)
 
 }
 
-void MyPanel::OnButtonLongSysEx(wxCommandEvent &event)
+void MyPanel::OnButtonLongSysEx(wxCommandEvent& WXUNUSED(event))
 {
 	//Send a very long non-sense SysEx message, for testing
 
@@ -951,7 +950,7 @@ void MyPanel::OnButtonLongSysEx(wxCommandEvent &event)
 	StartReceiving();
 }
 
-void MyPanel::OnComboSections(wxCommandEvent &event)
+void MyPanel::OnComboSections(wxCommandEvent& WXUNUSED(event))
 {
 	// A new section selected. Reload Instruments combo with the instruments in the
 	//selected section
@@ -963,7 +962,7 @@ void MyPanel::OnComboSections(wxCommandEvent &event)
 
 }
 
-void MyPanel::OnComboInstruments(wxCommandEvent &event)
+void MyPanel::OnComboInstruments(wxCommandEvent& WXUNUSED(event))
 {
 	// A new instrument selected. Change Midi program
 	DoProgramChange();
@@ -985,7 +984,7 @@ void MyPanel::CloseDevices()
 
 }
 
-void MyPanel::OnButtonStartListening(wxCommandEvent &event)
+void MyPanel::OnButtonStartListening(wxCommandEvent& WXUNUSED(event))
 {
 	if (!m_pInDev) {
 		m_text->AppendText(_T("No input device. Listening not started.\n"));
@@ -1008,7 +1007,7 @@ void MyPanel::OnButtonStartListening(wxCommandEvent &event)
 
 }
 
-void MyPanel::OnButtonStopListening(wxCommandEvent &event)
+void MyPanel::OnButtonStopListening(wxCommandEvent& WXUNUSED(event))
 {
 	if (!m_pInDev) {
 		m_text->AppendText(_T("No input device. Listening was not started.\n"));
@@ -1022,7 +1021,7 @@ void MyPanel::OnButtonStopListening(wxCommandEvent &event)
 
 
 
-void MyPanel::OnButtonStartReceiving(wxCommandEvent &event)
+void MyPanel::OnButtonStartReceiving(wxCommandEvent& WXUNUSED(event))
 {
 	StartReceiving();
 }
@@ -1058,7 +1057,7 @@ void MyPanel::CreatePollingEvent()
 
 }
 
-void MyPanel::OnButtonCrash(wxCommandEvent &event)
+void MyPanel::OnButtonCrash(wxCommandEvent& WXUNUSED(event))
 {
 	StartReceiving();
 	m_fDoCrash = true;
@@ -1136,7 +1135,7 @@ void MyPanel::DoReceiveMessage()
 
 }
 
-void MyPanel::OnButtonStopReceiving(wxCommandEvent &event)
+void MyPanel::OnButtonStopReceiving(wxCommandEvent& WXUNUSED(event))
 {
 	m_fReceiveEnabled = false;
 	m_text->AppendText(_T("Reception stopped.\n"));
@@ -1162,6 +1161,6 @@ void MyPanel::StartReceiving()
 	m_fCreatePollingEvent = true;		//when idle, create a Midi event
 }
 
-void MyPanel::OnButtonLoopBack(wxCommandEvent &event)
+void MyPanel::OnButtonLoopBack(wxCommandEvent& WXUNUSED(event))
 {
 }

@@ -574,12 +574,17 @@ wxMidiError wxMidiInDevice::StartListening(wxWindow* pWindow, unsigned long nPol
 
 wxMidiError wxMidiInDevice::StopListening()
 {
-    if (m_pThread == nullptr) return wxMIDI_ERROR_BadPtr;
+    if (m_pThread != nullptr)
+    {
+        //m_pThread should be valid, unless the device was not open or memory corruption.
+        //Thus, no need to emit error messages as either, StopListening() is
+        //correctly handled or, if memory corrupted, the program will crash.
 
-	//stop the thread and wait for its termination
-	m_pThread->Delete();
-	delete m_pThread;
-	m_pThread = (wxMidiThread*)NULL;
+        //stop the thread and wait for its termination
+        m_pThread->Delete();
+        delete m_pThread;
+        m_pThread = (wxMidiThread*)NULL;
+    }
 	return wxMIDI_NO_ERROR;
 }
 
