@@ -1,3 +1,6 @@
+#ifndef __WXMIDI_H__		//to avoid nested includes
+#define __WXMIDI_H__
+
 //=====================================================================================
 // wxMidi: A MIDI interface based on PortMidi, the Portable Real-Time MIDI Library
 // --------------------------------------------------------------------------------
@@ -12,9 +15,6 @@
 #ifdef __GNUG__
 #pragma interface "wxMidi.cpp"
 #endif
-
-#ifndef __WXMIDI_H__		//to avoid nested includes
-#define __WXMIDI_H__
 
 // For compilers that support precompilation, includes "wx/wx.h".
 #include "wx/wxprec.h"
@@ -230,7 +230,7 @@ enum wxMidiFilter
 /// Event wxEVT_MIDI_INPUT is a command event triggered when a new MIDI message is available
 /// to be read. This event is only triggered if the user application has called method
 /// wxMidiInDevice::StartListening().
-DECLARE_EVENT_TYPE(wxEVT_MIDI_INPUT, -1)
+wxDECLARE_EVENT(wxEVT_MIDI_INPUT, wxCommandEvent);
 
 /// Identifies the MIDI message type
 enum wxMidiMsgType

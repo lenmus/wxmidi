@@ -305,9 +305,8 @@ enum {
 };
 
 //Define a new event to poll MIDI input
-DECLARE_EVENT_TYPE(wxEVT_POLLING_EVENT, -1)
-
-DEFINE_EVENT_TYPE(wxEVT_POLLING_EVENT)
+//wxDECLARE_EVENT(wxEVT_POLLING_EVENT, wxCommandEvent); // Dclaration. For the header file. Not needed here, since it's a source file.
+wxDEFINE_EVENT(wxEVT_POLLING_EVENT, wxCommandEvent);    // Definition. For the source file.
 
 
 
@@ -571,7 +570,7 @@ MyPanel::MyPanel( wxFrame *frame, int x, int y, int w, int h )
 
 	m_btCrash = new wxButton(panel, ID_CRASH, _T("Crash program"),
 									wxPoint(30,30), wxSize(140,25) );
-    pPanel4Sizer->Add(m_btCrash, 0, wxALL, 10 );
+    pPanel5Sizer->Add(m_btCrash, 0, wxALL, 10 );
 
     m_book->AddPage(panel, _("Crash test"), false);
 

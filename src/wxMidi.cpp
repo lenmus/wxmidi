@@ -31,7 +31,7 @@
 wxMidiTimestamp wxMidiGetTime() { return Pt_Time(); }
 
 //Define the new command event to inform that MIDI input data is available
-DEFINE_EVENT_TYPE(wxEVT_MIDI_INPUT)
+wxDEFINE_EVENT(wxEVT_MIDI_INPUT, wxCommandEvent);
 
 //================================================================================
 // Implementation of classes wxMidiPmEvent, wxMidiShortEvent and wxMidiSysExEvent
@@ -574,6 +574,8 @@ wxMidiError wxMidiInDevice::StartListening(wxWindow* pWindow, unsigned long nPol
 
 wxMidiError wxMidiInDevice::StopListening()
 {
+    if (m_pThread == nullptr) return wxMIDI_ERROR_BadPtr;
+
 	//stop the thread and wait for its termination
 	m_pThread->Delete();
 	delete m_pThread;
